@@ -8,7 +8,7 @@ from .server import Serve
 def myF(argv):
     arg_port = 2000
     help_file = open
-    arg_help = open(os.path.dirname(__file__) + "\help.txt", "r").read()
+    arg_help = open(os.path.dirname(__file__) + "/help.txt", "r").read()
     
     try:
         opts, args = getopt.getopt(argv[1:], "hi:p:", ["help", "port"])
