@@ -17,8 +17,8 @@ async def handle(request):
     time = str(datetime.now())[:-7]
     method = request.method
     text = '[{time}] --- {method} --- {path}'.format(time=time, method=method, path=name)
+    content, code, file_type = path(name)
     if "." in name:
-        content, code, file_type = path(name)
         file_type = file_type[0]
         text += '" {}'.format(code)
         print(text)
